@@ -1,0 +1,79 @@
+<h1>{{appName}}</h1>
+
+<h2>{{header1}}</h2>
+
+<!--Numeric Numbers-->
+<p>Give the numbers 50 and 30, compute for the following :</p>
+<p>The sum of {{n1}} and {{n2}} is {{n1 + n2}} </p>
+<p>The difference of {{n1}} and {{n2}} is {{n1 - n2}} </p>
+<p>The quotient of {{n1}} and {{n2}} is {{n1 * n2}} </p>
+<p>The product of {{n1}} and {{n2}} is {{n1 / n2}} </p>
+
+<!--Property-->
+<input type="text" [value]="clientName">
+<p [style.color]="myColor">Text color style using style binding.</p>
+
+<!--Style and class-->
+<p [class]="appliedCSSClass">This line applied the style binding</p>
+<p [class.blue]="notappliedCSSClass">While this line does not!</p>
+
+<!---Two-way binding-->
+<h3>Two-way data binding</h3>
+<button (click)="showData($event)">Click me!</button>
+<button (on-click)="showData($event)">Click me too!</button>
+
+<p>Using keyup, keydown, blur, mouse actions</p>
+<input type="text" #keyupbox placeholder="keyup box"(keyup)=getData(keyupbox.value)/>
+<input type="text" #keydownbox placeholder="keydown box"(keydown)=getData(keydownbox.value)/>
+<input type="text" #keyblurbox placeholder="blur box"(blur)=getData(keyblurbox.value)/>
+<input type="text" #keyinputbox placeholder="input box"(input)=getData(keyinputbox.value)/>
+
+<h2 (mouseover)="getData('mouse over')">Hover your mouse on this text!</h2>
+<h2 (mouseleave)="getData('mouse left')">Hover your mouse on this text and leave it!</h2>
+<div *ngIf="true">
+    Display this message
+</div>
+<hr>
+<p>ngIfElse Example</p>
+
+<div *ngIf="isLogin">Content to render when condition is true.</div>
+
+<p>ngFor Directive Example</p>
+
+<ul>
+    <li *ngFor="let x of list;">
+        {{x}}
+    </li>
+</ul>
+
+<ul>
+    <li *ngFor="let std of studentArr; trackBy: trackByData">
+        {{std.name}}
+    </li>
+</ul>
+<h3>Angular - Display a list of items with ngFor</h3>
+<div class="container">
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Role</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td>{{user.firstName}} {{user.lastName}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.role}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h2>Switch Directive</h2>
+<ul [ngSwitch]="logInName">
+    <li *ngSwitchCase="'user'"><p>User is logged in..</p></li>
+    <li *ngSwitchCase="'admin'"><p>Admin is logged in..</p></li>
+    <li *ngSwitchDefault><p>Please choose login name</p></li>
+</ul>
