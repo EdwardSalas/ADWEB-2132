@@ -1,0 +1,66 @@
+<div class="card text-center">
+  <div class="card-header">
+    HOLY ANGEL UNIVERSITY GRADEBOOK
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Student Information</h5>
+    <br>
+    <p>Name: <input type="text" [(ngModel)]= "studName" /></p>
+    <p>Subject 1: <input type="text" [(ngModel)]= "subject" /></p>
+    <p>Subject 2: <input type="" [(ngModel)]= "subject1" /></p>
+<br>
+<br>
+<br>
+<div id="una" class="card border-dark mb-3" style="width: 18rem;">
+  <div class="card-header" contentEditable=true>
+    {{subject}}
+    </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Prelim: <input type="number" [(ngModel)]="prelim" class="form-control" placeholder ="Prelim" /> </li>
+    <li class="list-group-item">Midterm: <input type="number" [(ngModel)]="midterm" class="form-control" placeholder ="Midterm" /> </li>
+    <li class="list-group-item">Finals: <input type="number" [(ngModel)]="final" class="form-control" placeholder ="Final" /></li>
+    <p>Prelim grade: {{prelim}}</p>
+    <p>Midterm grade: {{midterm}}</p>
+    <p>Final grade: {{final}}</p>
+  </ul>
+</div>
+<div id="pangalawa" class="card border-dark mb-3" style="width: 18rem;">
+  <div class="card-header"  contentEditable=true>
+    {{subject1}}
+    </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Prelim: <input type="number" [(ngModel)]="prelim1" class="form-control" placeholder ="Prelim1" /> </li>
+    <li class="list-group-item">Midterm: <input type="number" [(ngModel)]="midterm1" class="form-control" placeholder ="Midterm1" /> </li>
+    <li class="list-group-item">Finals: <input type="number" [(ngModel)]="final1" class="form-control" placeholder ="Final1" /></li>
+    <p>Prelim grade: {{prelim1}}</p>
+    <p>Midterm grade: {{midterm1}}</p>
+    <p>Final grade: {{final1}}</p>
+  </ul>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p class="card-text">Please check the information below.</p>
+
+<p>Good morning, {{studName}}, your final average for {{subject}} is {{(this.prelim+this.midterm+this.final)/3}} while {{subject1}} is {{(this.prelim1+this.midterm1+this.final1)/3}} . </p>
+  </div>
+  <div class="card-footer text-muted">
+    HOLY ANGEL UNIVERSITY 
+  </div>
+</div>
