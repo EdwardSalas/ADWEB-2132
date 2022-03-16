@@ -1,0 +1,17 @@
+<div class="container1" *ngFor="let employee of employeeslist;">
+    <div id="cards" class="row">
+      
+
+          <div class="card">
+              <table>
+                  <tr>
+                      <th>
+                        {{ employee.id }}
+                      </th>
+                  </tr>
+                  <br>
+                  <tr>
+                    Fullname: {{employee.firstname}} {{employee.lastname}} 
+                  </tr>
+                  <tr>email: {{employee.email}}</tr>
+              </table>
